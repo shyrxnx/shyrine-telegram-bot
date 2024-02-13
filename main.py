@@ -10,11 +10,11 @@ BOT_USERNAME: Final = '@shyrxnx_bot'
 
 # Commands
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(f"Hello! I'm a Shyrine's Bot")
+    await update.message.reply_text(f"Happy Valentines Day!!! <3")
 
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(f"Honey, ask Shyrine for help!")
+    await update.message.reply_text(f"Yes, how can I help you? :)")
 
 
 async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -60,6 +60,9 @@ def handle_response(text: str) -> str:
 
     if 'how are you' in processed:
         return "I am doing good! Thank you for asking."
+
+    if 'love' in processed:
+        return "LUH"
 
     if 'time' in processed:
         now = datetime.now()
